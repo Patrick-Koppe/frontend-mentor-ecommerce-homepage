@@ -1,0 +1,9 @@
+@import "../../node_modules/bootstrap/scss/bootstrap-grid.scss";
+
+$font-stack: Helvetica, sans-serif;
+$primary-color: #000;
+body {
+  background: #eee;
+  font: 100% $font-stack;
+  color: $primary-color;
+}
