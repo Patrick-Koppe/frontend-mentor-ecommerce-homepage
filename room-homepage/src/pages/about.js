@@ -6,7 +6,9 @@ const AboutPage = () => {
     <main>
       <title>Über uns</title>
       <MainMenu />
-      <h1>Über uns</h1>
+      <article>
+        <h1>Über uns</h1>
+      </article>
     </main>
   )
 }

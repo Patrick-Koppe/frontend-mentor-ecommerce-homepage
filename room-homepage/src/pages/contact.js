@@ -6,7 +6,9 @@ const ContactPage = () => {
     <main>
       <title>Kontakt</title>
       <MainMenu />
-      <h1>Kontakt Seite</h1>
+      <article>
+        <h1>Kontakt Seite</h1>
+      </article>
     </main>
   )
 }

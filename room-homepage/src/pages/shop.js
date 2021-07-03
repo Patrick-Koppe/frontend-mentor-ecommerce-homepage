@@ -6,7 +6,9 @@ const ShopPage = () => {
     <main>
       <title>Shop</title>
       <MainMenu />
-      <h1>Shop Seite</h1>
+      <article>
+        <h1>Shop Seite</h1>
+      </article>
 
     </main>
   )
