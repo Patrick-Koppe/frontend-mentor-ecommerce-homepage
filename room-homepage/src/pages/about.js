@@ -1,11 +1,11 @@
 import * as React from 'react'
-import MainMenu from '../components/mainmenu'
+import Header from '../components/header'
 
 const AboutPage = () => {
   return (
     <main>
       <title>Über uns</title>
-      <MainMenu />
+      <Header />
       <article>
         <h1>Über uns</h1>
       </article>

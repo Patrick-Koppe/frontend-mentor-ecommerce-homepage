@@ -1,8 +1,10 @@
 import * as React from "react"
 
-import MainMenu from "../components/mainmenu"
-
+import Header from "../components/header"
 import { Container, Row, Col } from "react-bootstrap"
+
+
+
 
 // markup
 const IndexPage = () => {
@@ -10,7 +12,7 @@ const IndexPage = () => {
   return (
     <main>
       <title>room</title>
-      <MainMenu />
+      <Header />
       <article>
         <Container>
           <Row>

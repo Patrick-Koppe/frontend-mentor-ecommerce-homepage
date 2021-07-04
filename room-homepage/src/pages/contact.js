@@ -1,11 +1,11 @@
 import * as React from 'react'
-import MainMenu from '../components/mainmenu'
+import Header from '../components/header'
 
 const ContactPage = () => {
   return (
     <main>
       <title>Kontakt</title>
-      <MainMenu />
+      <Header />
       <article>
         <h1>Kontakt Seite</h1>
       </article>
