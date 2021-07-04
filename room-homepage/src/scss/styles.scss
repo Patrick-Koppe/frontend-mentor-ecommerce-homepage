@@ -11,7 +11,7 @@ $white: hsl(0, 0%, 100%);
 
 
 body {
-  background: gray;
+  background: $white;
   font: 12px/20px $font-stack;
   overflow-x: hidden;
 
