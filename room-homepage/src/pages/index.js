@@ -6,6 +6,7 @@ import { Container, Row, Col } from "react-bootstrap"
 
 
 
+
 // markup
 const IndexPage = () => {
 

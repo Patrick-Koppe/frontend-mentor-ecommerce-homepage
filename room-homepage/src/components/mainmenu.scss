@@ -1,109 +1,86 @@
 @import '../scss/styles.scss';
-header {
-  position: fixed;
-  width: 100%;
 
-  .mainmenu {
+.mainmenu {
 
-    align-content: space-around;
-    align-items: center;
-    display: flex;
-    color: $white;
-    height: 100px;
-    position: relative;
+  align-content: space-around;
+  align-items: center;
+  display: flex;
+  color: $white;
+  height: 100px;
+  position: relative;
 
 
-    li {
-      display: inline-block;
-      font-weight: bold;
-      list-style: none;
+  li {
+    display: inline-block;
+    font-weight: bold;
+    list-style: none;
 
-      // active page
-      [aria-current]:not([aria-current="false"]) {
-        text-decoration: underline;
-      }
-      a {
+    // active page
+    [aria-current]:not([aria-current="false"]) {
+      text-decoration: underline;
+    }
+    a {
+      color: $white;
+      text-decoration: none;
+    }
+
+    &.burger-btn {
+      font-size: 1.5rem;
+
+      button {
+        background: transparent;
         color: $white;
-        text-decoration: none;
+        outline: none;
+        border: none;
       }
+
+      .fa-times {
+        color: $dark-grey;
+      }
+    }
+
+    &.logo {
+      opacity: 1;
+      text-align: center;
+      transition: opacity .3s ease-in-out;
+      width: 75%;
+    }
+
+    .extended-list {
+      align-content: space-around;
+      align-items: center;
+      display: flex;
+      height: 100px;
+      justify-content: flex-end;
+      opacity: 0;
+      position: absolute;
+      top:0;
+      transition: opacity .3s ease-in-out;
+      right: 0;
+      width: 90%;
+      z-index: -2;
+    }
+
+    @include media-breakpoint-up(md) { 
 
       &.burger-btn {
-        font-size: 1.5rem;
-
-        button {
-          background: transparent;
-          color: $white;
-          outline: none;
-          border: none;
-        }
-
-        .fa-times {
-          color: $dark-grey;
-        }
+        display: none;
       }
 
       &.logo {
+        width: auto;
+      }
+
+      .extended-list {
+        background: transparent;
+        position: relative;
+        left: auto;
         opacity: 1;
-        text-align: center;
-        transition: opacity .3s ease-in-out;
-        width: 75%;
-      }
-
-      .extended-list {
-        align-content: space-around;
-        align-items: center;
-        display: flex;
-        height: 100px;
-        justify-content: flex-end;
-        opacity: 0;
-        position: absolute;
-        top:0;
-        transition: opacity .3s ease-in-out;
-        right: 0;
-        width: 90%;
-        z-index: -2;
-      }
-
-      @include media-breakpoint-up(md) { 
-
-        &.burger-btn {
-          display: none;
-        }
-
-        &.logo {
-          width: auto;
-        }
-
-        .extended-list {
-          background: transparent;
-          position: relative;
-          left: auto;
-          opacity: 1;
-          top: auto;
-          width: 100%;
-          z-index: 1;
-        }
-      
-      }
-    }
-    
-  }
-
-  &.mm-open {
-    background: white;
-
-    .mainmenu {
-      a {
-        color: $primary-color;
-      }
-
-      .logo {
-        opacity: 0;
-      }
-      .extended-list {
+        top: auto;
+        width: 100%;
         z-index: 1;
-        opacity: 1;
       }
+    
     }
   }
 }
