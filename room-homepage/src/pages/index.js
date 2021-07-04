@@ -85,8 +85,26 @@ const IndexPage = ({ data }) => {
               </Col>
             </Row>
           </Slider>
+          <Row>
+            <Col xs={12} md={3} className="p-0">
+              <Img fluid={data.image04.childImageSharp.fluid} />
+            </Col>
+            <Col xs={12} md={6} className="p-0">
+              <div className="textbox">
+                <h3>About our furniture</h3>
+                <p>
+                  Out multifunctional collection blends design and function to suit your individual taste. Make each
+                  room unique, or pick a cohesive theme that best express your interests and what inspires you.
+                  Find the furniture pieces you need, from traditional to contemporary styles or anything in between.
+                  Product specialists are available to help create your dream space.
+                </p>
+              </div>
+            </Col>
+            <Col xs={12} md={3} className="p-0">
+              <Img fluid={data.image05.childImageSharp.fluid} />
+            </Col>
+          </Row>
         </Container>
-
       </article>
     </main >
   )
@@ -113,6 +131,22 @@ export const query = graphql`
       }
     }
     image03: file(relativePath: {eq: "desktop-image-hero-3.jpg"}) {
+      id
+      childImageSharp {
+        fluid( maxWidth: 850, quality: 100) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    image04: file(relativePath: {eq: "image-about-dark.jpg"}) {
+      id
+      childImageSharp {
+        fluid( maxWidth: 850, quality: 100) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    image05: file(relativePath: {eq: "image-about-light.jpg"}) {
       id
       childImageSharp {
         fluid( maxWidth: 850, quality: 100) {

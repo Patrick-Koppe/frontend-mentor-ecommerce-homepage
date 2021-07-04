@@ -13,6 +13,7 @@
     }
   }
   .slick-arrow {
+    background: $primary-color;
     bottom: 0;
     top: auto;
     height: 80px;
@@ -21,13 +22,16 @@
     transform: inherit;
     width: 80px;
 
+    &:focus,
+    &:hover {
+      background: $very-dark-grey;
+    }
+
     &.slick-next {
-      background: $primary-color;
       right: 0;
       top: 370px;
     }
     &.slick-prev {
-      background: $primary-color;
       left: auto;
       right: 80px;
       top: 370px;
@@ -45,12 +49,10 @@
 
       .slick-arrow {
         &.slick-next {
-          background: $primary-color;
           right: calc(50% - 160px);
           top: auto;
         }
         &.slick-prev {
-          background: $primary-color;
           left: auto;
           right: calc(50% - 80px);
           top: auto;
