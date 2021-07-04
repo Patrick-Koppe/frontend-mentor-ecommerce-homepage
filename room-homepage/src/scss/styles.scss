@@ -1,8 +1,9 @@
  @import "~bootstrap/scss/bootstrap-reboot.scss";
  @import "~bootstrap/scss/bootstrap-grid";
+ @import "./font.scss";
 
 
-$font-stack: Helvetica, sans-serif;
+$font-stack: 'Spartan-Medium', sans-serif;
 $primary-color: hsl(0, 0%, 0%);
 $dark-grey: hsl(0, 0%, 63%);
 $very-dark-grey: hsl(0, 0%, 27%);
@@ -11,12 +12,37 @@ $white: hsl(0, 0%, 100%);
 
 body {
   background: gray;
-  font: 100% $font-stack;
-  color: $primary-color;
+  font: 12px/20px $font-stack;
+
+  color: $dark-grey;
+
 
   a {
     color: $primary-color;
   }
 
+  p {
+    margin-bottom: 1.5rem;
+  }
 
+  h1 {
+    color: $primary-color;
+    font-family: 'Spartan-Bold', sans-serif;
+    margin-bottom: 1.5rem;
+  }
+
+  .link-btn {
+    font-family: 'Spartan-SemiBold', sans-serif;
+    letter-spacing: .5rem;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    &:hover {
+      color: $very-dark-grey;
+    }
+  }
+
+  .gatsby-image-wrapper {
+    height: 100%;
+  }
 }

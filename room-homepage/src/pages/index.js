@@ -1,42 +1,124 @@
 import * as React from "react"
+import { graphql } from "gatsby"
 
 import Header from "../components/header"
 import { Container, Row, Col } from "react-bootstrap"
+import Img from "gatsby-image"
+import { Link } from 'gatsby'
+import Slider from "react-slick";
 
+import NextArrow from "../assets/icon-angle-right.svg"
+import PrevArrow from "../assets/icon-angle-left.svg"
 
-
+import '../components/textbox.scss'
+import '../scss/slick.scss'
 
 
 // markup
-const IndexPage = () => {
+const IndexPage = ({ data }) => {
+
+  const settings = {
+    accessibility: true,
+    dots: false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: true,
+    nextArrow: <NextArrow />,
+    prevArrow: <PrevArrow />
+  };
 
   return (
     <main>
       <title>room</title>
       <Header />
       <article>
-        <Container>
-          <Row>
-            <Col xs={12} md={8} lg={6}>
-              <h1>
-                Congratulations
-                <span>— you just made a Gatsby</span>
-                <span role="img" aria-label="Party popper emojis">
-                  🎉🎉🎉
-                </span>
-              </h1>
-            </Col>
-            <Col xs={12} md={4} lg={6}>
-              <img
-                alt="Gatsby G Logo"
-                src="data:image/svg+xml,%3Csvg width='24' height='24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12 2a10 10 0 110 20 10 10 0 010-20zm0 2c-3.73 0-6.86 2.55-7.75 6L14 19.75c3.45-.89 6-4.02 6-7.75h-5.25v1.5h3.45a6.37 6.37 0 01-3.89 4.44L6.06 9.69C7 7.31 9.3 5.63 12 5.63c2.13 0 4 1.04 5.18 2.65l1.23-1.06A7.959 7.959 0 0012 4zm-8 8a8 8 0 008 8c.04 0 .09 0-8-8z' fill='%23639'/%3E%3C/svg%3E"
-              />
-            </Col>
-          </Row>
+        <Container fluid className="p-0">
+          <Slider {...settings}>
+            <Row>
+              <Col xs={12} md={6} className="p-0">
+                <Img fluid={data.image01.childImageSharp.fluid} />
+              </Col>
+              <Col xs={12} md={6} className="p-0">
+                <div className="textbox">
+                  <h1>Discover innovative ways to decorate</h1>
+                  <p>
+                    We provide unmatched quality, comfort, and style for property owners across the country.
+                    Our experts combine form and function bringing your vision to life. Create a room in your
+                    own style with our collection and make your property a reflection of you and what you love.
+                  </p>
+                  <Link className="link-btn" to="/shop">Shop Now</Link>
+                </div>
+              </Col>
+            </Row>
+            <Row>
+              <Col xs={12} md={6} className="p-0">
+                <Img fluid={data.image02.childImageSharp.fluid} />
+              </Col>
+              <Col xs={12} md={6} className="p-0">
+                <div className="textbox">
+                  <h1>We are available all across the globe</h1>
+                  <p>
+                    With stores all over the world, is's easy for you to find furniture for your home or place of
+                    business. Locally, we're in most major cities throughout the country. Find the branch nearest
+                    you using our store locator. Any questions? Don't hestitate to contact us today.
+                  </p>
+                  <Link className="link-btn" to="/shop">Shop Now</Link>
+                </div>
+              </Col>
+            </Row>
+            <Row>
+              <Col xs={12} md={6} className="p-0">
+                <Img fluid={data.image03.childImageSharp.fluid} />
+              </Col>
+              <Col xs={12} md={6} className="p-0">
+                <div className="textbox">
+                  <h1>Manufacturted with the best materials</h1>
+                  <p>
+                    Our modern furniture store provide a high level of quality. Our company has invested in advanced
+                    technology to ensure that every product is made as perfect and as consistent as possible. With
+                    three decades of experience in this industry, we understand what customers want for their home and office.
+                  </p>
+                  <Link className="link-btn" to="/shop">Shop Now</Link>
+                </div>
+              </Col>
+            </Row>
+          </Slider>
         </Container>
+
       </article>
     </main >
   )
 }
 
 export default IndexPage
+
+export const query = graphql`
+  query {
+    image01: file(relativePath: {eq: "desktop-image-hero-1.jpg"}) {
+      id
+      childImageSharp {
+        fluid( maxWidth: 850, quality: 100) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    image02: file(relativePath: {eq: "desktop-image-hero-2.jpg"}) {
+      id
+      childImageSharp {
+        fluid( maxWidth: 850, quality: 100) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    image03: file(relativePath: {eq: "desktop-image-hero-3.jpg"}) {
+      id
+      childImageSharp {
+        fluid( maxWidth: 850, quality: 100) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+  }
+`

@@ -1,3 +1,5 @@
+const path = require(`path`)
+
 const myCustomQueries = {
   xs: '(min-width: 0)',
   sm: '(max-width: 576px)',
@@ -18,19 +20,27 @@ module.exports = {
     "gatsby-plugin-sharp",
     "gatsby-plugin-fontawesome-css",
     "gatsby-transformer-sharp",
+    "gatsby-transformer-remark",
     {
       resolve: "gatsby-source-filesystem",
       options: {
         name: "images",
-        path: "./src/images/",
+        path: path.join(__dirname, `src`, `images`),
       },
-      __key: "images",
     },
     {
       resolve: "gatsby-plugin-breakpoints",
       options: {
         queries: myCustomQueries,
       },
+    },
+    {
+      resolve: "gatsby-plugin-react-svg",
+      options: {
+        rule: {
+          include: /assets/
+        }
+      }
     },
   ],
 };
