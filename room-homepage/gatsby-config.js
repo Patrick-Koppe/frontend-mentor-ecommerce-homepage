@@ -42,5 +42,15 @@ module.exports = {
         }
       }
     },
+    {
+      resolve: "gatsby-plugin-manifest",
+      options: {
+        name: "Room-homepage",
+        short_name: "Room",
+        start_url: "/",
+        display: "standalone",
+        icon: "src/assets/icon.png"
+      },
+    },
   ],
 };
