@@ -9,6 +9,7 @@ import Slider from "react-slick";
 
 import NextArrow from "../assets/icon-angle-right.svg"
 import PrevArrow from "../assets/icon-angle-left.svg"
+import Arrow from "../assets/icon-arrow.svg"
 
 import '../components/textbox.scss'
 import '../scss/slick.scss'
@@ -48,7 +49,7 @@ const IndexPage = ({ data }) => {
                     Our experts combine form and function bringing your vision to life. Create a room in your
                     own style with our collection and make your property a reflection of you and what you love.
                   </p>
-                  <Link className="link-btn" to="/shop">Shop Now</Link>
+                  <Link className="link-btn" to="/shop">Shop Now <Arrow /></Link>
                 </div>
               </Col>
             </Row>
@@ -64,7 +65,7 @@ const IndexPage = ({ data }) => {
                     business. Locally, we're in most major cities throughout the country. Find the branch nearest
                     you using our store locator. Any questions? Don't hestitate to contact us today.
                   </p>
-                  <Link className="link-btn" to="/shop">Shop Now</Link>
+                  <Link className="link-btn" to="/shop">Shop Now <Arrow /></Link>
                 </div>
               </Col>
             </Row>
@@ -80,7 +81,7 @@ const IndexPage = ({ data }) => {
                     technology to ensure that every product is made as perfect and as consistent as possible. With
                     three decades of experience in this industry, we understand what customers want for their home and office.
                   </p>
-                  <Link className="link-btn" to="/shop">Shop Now</Link>
+                  <Link className="link-btn" to="/shop">Shop Now <Arrow /></Link>
                 </div>
               </Col>
             </Row>

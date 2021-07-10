@@ -55,10 +55,20 @@ body {
 
     &:hover {
       color: $dark-grey;
+
+      svg {
+        path {
+          fill: $dark-grey;
+        }
+      }
     }
   }
 
   .gatsby-image-wrapper {
     height: 100%;
+  }
+
+  .text-center {
+    text-align: center !important;
   }
 }

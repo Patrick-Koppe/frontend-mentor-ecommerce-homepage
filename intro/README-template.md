@@ -35,8 +35,8 @@ Add a screenshot of your solution. The easiest way to do this is to use Firefox 
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [room-homepage](https://github.com/Patrick-Koppe/frontend-mentor-ecommerce-homepage/tree/master/room-homepage)
+- Live Site URL: [https://frontendmentorecommercehomepag.gatsbyjs.io/](https://frontendmentorecommercehomepag.gatsbyjs.io/)
 
 ## My process
 
