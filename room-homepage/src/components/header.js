@@ -1,8 +1,8 @@
 import * as React from 'react'
 import { Container, Row, Col } from "react-bootstrap"
-import MainMenu from "../components/MainMenu"
 import { useBreakpoint } from 'gatsby-plugin-breakpoints';
 
+import MainMenu from './mainmenu'
 import "./header.scss"
 
 
